@@ -71,8 +71,8 @@ RUN echo "dot_style = mega" > "/root/.wgetrc"
 RUN echo "quiet = on" >> "/root/.wgetrc"
 
 RUN apt-get -q install --no-install-recommends -y software-properties-common
-sudo RUN add-apt-repository -y ppa:webupd8team/java
-sudo RUN apt-get -q update
+RUN add-apt-repository -y ppa:webupd8team/java
+RUN apt-get -q update
 
 # Auto-accept the Oracle JDK license
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
